@@ -25,8 +25,8 @@
         </div>
     
     <div class="col-md-3">
-          <asp:Label ID="Label3" runat="server" Text="Number of Guess left:" style= "font-size:26px;font-weight:bold" ></asp:Label>
-
+          <p><asp:Label ID="Label4" runat="server" Text="" style= "font-size:26px;font-weight:bold" ></asp:Label></p>
+          <p><asp:Label ID="Label3" runat="server" Text="Number of Guess left:" style= "font-size:26px;font-weight:bold" ></asp:Label><p>
           <p><asp:Label ID="Label2" runat="server" Text="Numbers Guessed: " style= "font-size:26px;font-weight:bold"  Visible="false"></asp:Label>
                          
         </div>

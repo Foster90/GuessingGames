@@ -130,18 +130,21 @@ namespace GuessingGames
                     randomNum = random.Next(1, 10);
                     guess = 5;
                     Label3.Text = "Number of Guess left: " + guess.ToString();
+                    Label4.Text = "Range: 1 - 10";
                     break;
 
                 case "Medium":
                     randomNum = random.Next(1, 100);
                     guess = 10;
                     Label3.Text = "Number of Guess left: " + guess.ToString();
+                    Label4.Text = "Range: 1 - 100";
                     break;
 
                 case "Hard":
                     randomNum = random.Next(1, 1000);
-                    guess = 20;
+                    guess = 15;
                     Label3.Text = "Number of Guess left: " + guess.ToString();
+                    Label4.Text = "Range: 1 - 1000";
                     break;
             }
 
