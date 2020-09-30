@@ -34,9 +34,10 @@ namespace GuessingGames
             
         protected void Guess_Click(object sender, EventArgs e)
         {
-            
+            attempts++;
             int userGuess = 0;
-          
+            int guessleft = guess - attempts;
+                      
             if(guess > attempts)
 
             {
@@ -53,6 +54,7 @@ namespace GuessingGames
                     Label1.ForeColor = System.Drawing.Color.DarkRed;
                     Label2.Visible = bool.Parse("true");
                     Label2.Text = Label2.Text + " " + TextBox1.Text;
+                    Label3.Text = "Number of Guess left: " + guessleft.ToString();
 
                 }
                 else if (userGuess == randomNum)
@@ -63,6 +65,7 @@ namespace GuessingGames
                     Label1.ForeColor = System.Drawing.Color.DarkGreen;
                     Label2.Visible = bool.Parse("true");
                     Label2.Text = Label2.Text + " " + TextBox1.Text;
+                    Label3.Text = "Number of Guess left: " + guessleft.ToString();
 
                 }
                 else if (userGuess < randomNum)
@@ -72,6 +75,7 @@ namespace GuessingGames
                     Label1.ForeColor = System.Drawing.Color.DarkRed;
                     Label2.Visible = bool.Parse("true");
                     Label2.Text = Label2.Text + " " + TextBox1.Text;
+                    Label3.Text = "Number of Guess left: " + guessleft.ToString();
 
                 }
 
@@ -86,10 +90,11 @@ namespace GuessingGames
                 Label2.Text = "Numbers Guessed:";
                 Label2.Visible = bool.Parse("false");                
                 Label1.ForeColor = System.Drawing.Color.DarkRed;
+                Label3.Text = "Number of Guess left: 0 ";
 
             }
 
-            attempts++;
+          
 
         }
 
@@ -99,7 +104,8 @@ namespace GuessingGames
             attempts = 0;
             Label1.Text = "Game Reset";
             Label1.ForeColor = System.Drawing.Color.DarkGreen;
-            Label2.Text = " ";
+            Label2.Text = "Numbers Guessed:";
+      
 
 
         }
@@ -123,16 +129,19 @@ namespace GuessingGames
                 case "Easy":
                     randomNum = random.Next(1, 10);
                     guess = 5;
+                    Label3.Text = "Number of Guess left: " + guess.ToString();
                     break;
 
                 case "Medium":
                     randomNum = random.Next(1, 100);
                     guess = 10;
+                    Label3.Text = "Number of Guess left: " + guess.ToString();
                     break;
 
                 case "Hard":
                     randomNum = random.Next(1, 1000);
                     guess = 20;
+                    Label3.Text = "Number of Guess left: " + guess.ToString();
                     break;
             }
 
